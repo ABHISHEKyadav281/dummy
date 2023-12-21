@@ -35,7 +35,7 @@ app.use("/api/auth", authRoutes);
 
 
 
-app.listen(`dummy-three-vert.vercel.app/`,(req,res,next) => {
+app.listen(8080,(req,res,next) => {
     try {connect()
     console.log("connected to server")}
     catch (err) {
