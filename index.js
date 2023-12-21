@@ -16,7 +16,10 @@ const connect = () => {
             console.log("connected to db");
         })
 }
- 
+
+ app.use('/',(req,res)=>{
+    res.json({msg:"hello abhishek"})
+ });
 app.use(cookieParser())
 app.use(express.json());
 
