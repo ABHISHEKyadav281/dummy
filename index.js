@@ -17,9 +17,7 @@ const connect = () => {
         })
 }
 
- app.use('/',(req,res)=>{
-    res.json({msg:"hello abhishek"})
- });
+
 app.use(cookieParser())
 app.use(express.json());
 
@@ -31,8 +29,11 @@ app.use((req,res,next)=>{
         
     );
     next();  
-})  
+})
 
+//  app.use('/',(req,res)=>{
+//     res.json({msg:"hello abhishek"})
+//  });
 app.use("/api/admin", adminRoutes);
 app.use("/api/auth", authRoutes);
 
